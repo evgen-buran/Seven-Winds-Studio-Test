@@ -49,7 +49,7 @@ dependencies {
 
     implementation("com.squareup.picasso:picasso:2.8")
 
-    implementation("com.yandex.android:mapkit-android:4.0.0")
+//    implementation("com.yandex.android:mapkit-android:4.0.0")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

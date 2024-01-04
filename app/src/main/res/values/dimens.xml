@@ -7,6 +7,7 @@
     <dimen name="title_edittext">15sp</dimen>
     <dimen name="margin_title_to_field">5dp</dimen>
     <dimen name="field_bottom_margin">24dp</dimen>
+    <dimen name="text_title_list">18sp</dimen>
+    <dimen name="text_title_menu">15sp</dimen>
     <dimen name="text_subtitle">14sp</dimen>
-    <dimen name="text_title">18sp</dimen>
 </resources>

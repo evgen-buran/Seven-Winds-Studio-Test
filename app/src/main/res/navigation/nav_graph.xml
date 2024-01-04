@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/registerFragment">
+    app:startDestination="@id/menuFragment">
 
     <fragment
         android:id="@+id/registerFragment"
@@ -18,5 +18,31 @@
         android:id="@+id/loginFragment"
         android:name="com.buranchikov.sevenwindsstudiotest.fragments.LoginFragment"
         android:label="LoginFragment"
-        tools:layout="@layout/fragment_login"/>
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_сoffeeListFragment"
+            app:destination="@id/сoffeeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.buranchikov.sevenwindsstudiotest.fragments.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/сoffeeListFragment"
+        android:name="com.buranchikov.sevenwindsstudiotest.fragments.СoffeeListFragment"
+        android:label="fragment_coffee_list"
+        tools:layout="@layout/fragment_coffee_list" >
+        <action
+            android:id="@+id/action_сoffeeListFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_сoffeeListFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.buranchikov.sevenwindsstudiotest.fragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
 </navigation>

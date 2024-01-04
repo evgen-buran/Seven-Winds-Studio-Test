@@ -8,4 +8,6 @@
     <string name="Repeat_password">Повторите пароль</string>
     <string name="register">Регистрация</string>
     <string name="Login">Войти</string>
+    <string name="go_to_pay">Перейти к оплате</string>
+    <string name="on_map">На карте</string>
 </resources>

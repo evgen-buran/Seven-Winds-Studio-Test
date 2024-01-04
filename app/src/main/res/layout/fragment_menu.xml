@@ -4,30 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.СoffeeListFragment">
+    tools:context=".fragments.MenuFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/rvMenu"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="14dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="24dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToPay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/list_item"/>
+        app:spanCount="2"
+        tools:listitem="@layout/menu_item" />
+
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnGoToPay"
         style="@style/style_btn"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginRight="19dp"
-        android:text="@string/on_map"
+        android:text="@string/go_to_pay"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/rvMenu"
+        app:layout_constraintStart_toStartOf="@+id/rvMenu" />
 </androidx.constraintlayout.widget.ConstraintLayout>
