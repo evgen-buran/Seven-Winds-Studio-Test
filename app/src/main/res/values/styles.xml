@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="register_login_editText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/field_background</item>
+        <item name="android:ems">10</item>
+        <item name="android:fontFamily">@font/sf_ui_display_light</item>
+        <item name="android:padding">@dimen/fields_paddings</item>
+        <item name="android:textColor">@color/base_color</item>
+        <item name="android:textColorHint">@color/secondary_text_color</item>
+    </style>
+
+    <style name="title_edit_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/margin_title_to_field</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:fontFamily">@font/sf_ui_display_light</item>
+        <item name="android:textColor">@color/base_color</item>
+        <item name="android:textSize">@dimen/title_edittext</item>
+    </style>
+
+    <style name="style_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/buttons_forms</item>
+        <item name="android:textColor">#F3F3F3</item>
+    </style>
+</resources>
