@@ -63,4 +63,10 @@
         <item name="android:textColor">@color/secondary_text_color</item>
         <item name="android:textSize">@dimen/text_title_menu</item>
     </style>
+
+    <style name="toolbar_style" parent="@style/Widget.Material3.Toolbar">
+
+        <item name="android:textColor">@color/base_text_color</item>
+        <item name="android:textSize">@dimen/text_title_list</item>
+    </style>
 </resources>

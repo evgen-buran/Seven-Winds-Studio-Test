@@ -10,4 +10,6 @@
     <string name="Login">Войти</string>
     <string name="go_to_pay">Перейти к оплате</string>
     <string name="on_map">На карте</string>
+    <string name="pay">Оплатить</string>
+    <string name="text_accept_order">Время ожидания заказа\n15 минут!\nСпасибо, что выбрали нас!</string>
 </resources>
