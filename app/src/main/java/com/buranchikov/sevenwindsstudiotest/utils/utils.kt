@@ -6,7 +6,9 @@ lateinit var APP_ACTIVITY: MainActivity
 lateinit var APP_API:AppAPI
 
 val TAG = "myLog"
-val BASE_URL = "http://147.78.66.203:3210/"
+val BASE_URL = "http://147.78.66.203:3210"
+val API_KEY = "330a5bbe-fa1c-44dd-90da-ff4d4489f346"
+
 
 
 fun showToast(str: String) {

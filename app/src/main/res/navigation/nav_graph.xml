@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_loginFragment_to_сoffeeListFragment"
             app:destination="@id/сoffeeListFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
     <fragment
         android:id="@+id/mapFragment"
@@ -30,7 +33,7 @@
         tools:layout="@layout/fragment_map" />
     <fragment
         android:id="@+id/сoffeeListFragment"
-        android:name="com.buranchikov.sevenwindsstudiotest.fragments.СoffeeListFragment"
+        android:name="com.buranchikov.sevenwindsstudiotest.fragments.LocationListFragment"
         android:label="fragment_coffee_list"
         tools:layout="@layout/fragment_coffee_list" >
         <action

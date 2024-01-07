@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         initRetrofit()
 
         viewModel = ViewModelProvider(APP_ACTIVITY).get(MainViewModel::class.java)
+
+
     }
 
     private fun initRetrofit() {

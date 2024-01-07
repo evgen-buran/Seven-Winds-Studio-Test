@@ -2,13 +2,23 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/etLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".fragments.RegisterFragment">
 
+    <TextView
+        android:id="@+id/token"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="token"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -37,7 +47,8 @@
                 android:id="@+id/etEmailLogin"
                 style="@style/register_login_editText"
                 android:hint="@string/email_hint"
-                android:inputType="text|textEmailAddress" />
+                android:inputType="text|textEmailAddress"
+                android:text="pop" />
         </LinearLayout>
 
         <LinearLayout
@@ -59,15 +70,27 @@
                 android:id="@+id/etPasswordLogin"
                 style="@style/register_login_editText"
 
-                android:inputType="text|textPassword" />
+                android:inputType="text|textPassword"
+                android:text="pop" />
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnLogin"
-            android:text="@string/Login"
+            style="@style/style_btn"
 
-            style="@style/style_btn" />
+            android:text="@string/Login" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRegisterNewUser"
+        android:text="@string/register_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item_subtitle"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
