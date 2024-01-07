@@ -15,4 +15,6 @@
     <string name="register_title_toolbar">Регистрация</string>
     <string name="Enter">Вход</string>
     <string name="register_new">Регистрация нового пользователя</string>
+    <string name="map">Карта</string>
+    <string name="near_coffee">Ближайшие кофейни</string>
 </resources>

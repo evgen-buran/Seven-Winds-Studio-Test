@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/mapFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/registerFragment"
@@ -28,16 +28,16 @@
     </fragment>
     <fragment
         android:id="@+id/mapFragment"
-        android:name="com.buranchikov.sevenwindsstudiotest.fragments.MapFragment"
+        android:name="com.buranchikov.sevenwindsstudiotest.fragments.map.MapFragment"
         android:label="fragment_map"
         tools:layout="@layout/fragment_map" />
     <fragment
         android:id="@+id/сoffeeListFragment"
-        android:name="com.buranchikov.sevenwindsstudiotest.fragments.LocationListFragment"
+        android:name="com.buranchikov.sevenwindsstudiotest.fragments.list_locations.LocationListFragment"
         android:label="fragment_coffee_list"
         tools:layout="@layout/fragment_coffee_list" >
         <action
-            android:id="@+id/action_сoffeeListFragment_to_mapFragment"
+            android:id="@+id/action_locationListFragment_to_mapFragment"
             app:destination="@id/mapFragment" />
         <action
             android:id="@+id/action_сoffeeListFragment_to_menuFragment"
