@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
-        android:name="com.buranchikov.sevenwindsstudiotest.fragments.MenuFragment"
+        android:name="com.buranchikov.sevenwindsstudiotest.fragments.list_menu.MenuFragment"
         android:label="fragment_menu"
         tools:layout="@layout/fragment_menu" >
         <action

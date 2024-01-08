@@ -61,7 +61,7 @@ class MapFragment : Fragment() {
                     TextStyle(
                         13.0f,
                         R.color.btn_color_pressed,
-                        R.color.btn_color_pressed,
+                        null,
                         TextStyle.Placement.BOTTOM,
                         0.0f,
                         true,
