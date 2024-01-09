@@ -2,7 +2,7 @@ package com.buranchikov.sevenwindsstudiotest.api
 
 import com.buranchikov.sevenwindsstudiotest.data_classes.AuthRequest
 import com.buranchikov.sevenwindsstudiotest.data_classes.AuthTokenResponse
-import com.buranchikov.sevenwindsstudiotest.data_classes.CoffeeMenu
+import com.buranchikov.sevenwindsstudiotest.data_classes.Product
 import com.buranchikov.sevenwindsstudiotest.data_classes.Location
 import com.buranchikov.sevenwindsstudiotest.data_classes.RegisterRequest
 import retrofit2.http.Body
@@ -25,11 +25,15 @@ interface AppAPI {
         @Body registerRequest: RegisterRequest,
     ): AuthTokenResponse
 
+
+//    @Headers("Content-Type: application/json")
     @GET("/location/{id}/menu")
     suspend fun getCoffeeMenu(
         @Header("Authorization") token: String,
         @Path("id") id: Int
-    ): List<CoffeeMenu>
+    ): List<Product>
+
+    //APP_API.getCoffeeMenu("Bearer $token", 1) через Bearer
 
     @GET("/locations")
     suspend fun getLocation(

@@ -17,4 +17,7 @@
     <string name="register_new">Регистрация нового пользователя</string>
     <string name="map">Карта</string>
     <string name="near_coffee">Ближайшие кофейни</string>
+    <string name="menu">Меню</string>
+    <string name="total_price">ИТОГО:</string>
+    <string name="youre_order">Ваш заказ</string>
 </resources>

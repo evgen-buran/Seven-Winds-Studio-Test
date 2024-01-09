@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="7dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
     android:layout_marginBottom="13dp"
     android:backgroundTint="@color/white"
     app:cardCornerRadius="5dp"
@@ -13,80 +13,72 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingBottom="8dp">
 
         <ImageView
             android:id="@+id/ivProductPhotoItem"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="165dp"
+            android:layout_height="137dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_launcher_foreground" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMenuNameItem"
+            style="@style/item_menu_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Эспрессо"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivProductPhotoItem" />
+
+        <TextView
+            android:id="@+id/tvMenuPriceItem"
+            style="@style/item_menu_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="200"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvMenuNameItem"
+            app:layout_constraintTop_toBottomOf="@+id/tvMenuNameItem" />
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="7"
+            android:gravity="bottom"
             android:orientation="horizontal"
-            android:weightSum="10"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivProductPhotoItem">
+            app:layout_constraintTop_toBottomOf="@+id/tvMenuNameItem">
 
-
-            <LinearLayout
+            <ImageView
+                android:id="@+id/ivMinusMenuItem"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="8dp"
-                android:layout_weight="5"
-                android:gravity="left"
-                android:orientation="vertical"
-                android:paddingLeft="11dp">
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/minus" />
 
-                <TextView
-                    android:id="@+id/tvMenuNameItem"
-                    style="@style/item_menu_title"
-                    android:text="Эспрессо" />
-
-                <TextView
-                    android:id="@+id/tvMenuPriceItem"
-                    style="@style/item_menu_subtitle"
-                    android:text="200" />
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/tvCountMenuItem"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:gravity="center|center_vertical"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/sf_ui_display_light"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/base_text_color"
+                android:textSize="18sp" />
 
-                <ImageView
-                    android:id="@+id/ivMinusMenuItem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/minus" />
+            <ImageView
+                android:id="@+id/ivPlusMenuItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/plus" />
 
-                <TextView
-                    android:id="@+id/tvCountMenuItem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:fontFamily="@font/sf_ui_display_light"
-                    android:gravity="center"
-                    android:text="2"
-                    android:textColor="@color/base_text_color"
-                    android:textSize="18sp" />
-
-                <ImageView
-                    android:id="@+id/ivPlusMenuItem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plus" />
-
-            </LinearLayout>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

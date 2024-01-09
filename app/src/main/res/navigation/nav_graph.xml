@@ -45,16 +45,16 @@
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
-        android:name="com.buranchikov.sevenwindsstudiotest.fragments.list_menu.MenuFragment"
+        android:name="com.buranchikov.sevenwindsstudiotest.fragments.list_menu.ProductFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" >
+        tools:layout="@layout/fragment_products" >
         <action
             android:id="@+id/action_menuFragment_to_orderListFragment"
             app:destination="@id/orderListFragment" />
     </fragment>
     <fragment
         android:id="@+id/orderListFragment"
-        android:name="com.buranchikov.sevenwindsstudiotest.fragments.OrderListFragment"
+        android:name="com.buranchikov.sevenwindsstudiotest.fragments.order.OrderListFragment"
         android:label="OrderListFragment"
         tools:layout="@layout/fragment_order_list"/>
 </navigation>

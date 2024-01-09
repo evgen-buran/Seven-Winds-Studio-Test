@@ -1,10 +1,10 @@
 package com.buranchikov.sevenwindsstudiotest
 
 import APP_ACTIVITY
-import BASE_URL
 import APP_API
-import androidx.appcompat.app.AppCompatActivity
+import BASE_URL
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -30,7 +30,9 @@ class MainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(APP_ACTIVITY).get(MainViewModel::class.java)
 
-
+        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar()?.setDisplayShowHomeEnabled(true);
+        binding.materialToolbar.setNavigationOnClickListener { _ -> onBackPressed() };
     }
 
     private fun initRetrofit() {

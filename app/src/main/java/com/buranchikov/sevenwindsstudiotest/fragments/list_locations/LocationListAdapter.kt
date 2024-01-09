@@ -12,7 +12,7 @@ import com.buranchikov.sevenwindsstudiotest.data_classes.Location
 import com.buranchikov.sevenwindsstudiotest.databinding.ListItemBinding
 import TAG
 
-class LocationsListAdapter : ListAdapter<Location, LocationsListAdapter.Holder>(Comparator()) {
+class LocationListAdapter : ListAdapter<Location, LocationListAdapter.Holder>(Comparator()) {
 
     class Holder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ListItemBinding.bind(view)
@@ -34,7 +34,9 @@ class LocationsListAdapter : ListAdapter<Location, LocationsListAdapter.Holder>(
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.bind(getItem(position))
         holder.itemView.setOnClickListener{
-            LocationListFragment.click(getItem(position))
+            LocationListFragment.click(getItem(position).id)
+            val id = getItem(position).id
+            Log.d(TAG, "onBindViewHolder: $id")
 
         }
     }
