@@ -6,6 +6,7 @@
     <color name="secondary_text_color">#AF9479</color>
     <color name="btn_color">#342D1A</color>
     <color name="btn_color_pressed">#221D11</color>
+    <color name="btn_color_disable">#8C8A8A</color>
     <color name="pointer_color">#342D1A</color>
     <color name="card_color">#F6E5D1</color>
 </resources>

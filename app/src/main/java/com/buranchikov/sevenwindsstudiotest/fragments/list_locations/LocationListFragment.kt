@@ -5,15 +5,15 @@ import APP_API
 import TAG
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.buranchikov.sevenwindsstudiotest.LocationHelper
 import com.buranchikov.sevenwindsstudiotest.R
-import com.buranchikov.sevenwindsstudiotest.data_classes.Product
 import com.buranchikov.sevenwindsstudiotest.data_classes.Location
 import com.buranchikov.sevenwindsstudiotest.data_classes.Point
+import com.buranchikov.sevenwindsstudiotest.data_classes.Product
 import com.buranchikov.sevenwindsstudiotest.databinding.FragmentCoffeeListBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -51,16 +51,6 @@ class LocationListFragment : Fragment() {
         }
         currentPoint = locationHelper.getCurrentLocation()
 
-        binding.btnX.setOnClickListener {
-            CoroutineScope(Dispatchers.IO).launch {
-                listCoffeeMenu = APP_API.getCoffeeMenu("Bearer $token", 1)
-                MainScope().launch {
-//                    APP_ACTIVITY.viewModel.menu.postValue(listCoffeeMenu)
-                    Log.d(TAG, "onStart: $listCoffeeMenu")
-                }
-
-            }
-        }
     }
 
     private fun getListCoffee(token: String) {
@@ -93,7 +83,7 @@ class LocationListFragment : Fragment() {
             this.token = token
         }
 
-        fun click(id:Int) {
+        fun click(id: Int) {
             CoroutineScope(Dispatchers.IO).launch {
                 val listMenu = APP_API.getCoffeeMenu("Bearer $token", id)
                 MainScope().launch {

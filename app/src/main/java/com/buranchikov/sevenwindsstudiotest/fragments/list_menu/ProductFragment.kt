@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.view.ContextThemeWrapper
 import androidx.fragment.app.Fragment
 import com.buranchikov.sevenwindsstudiotest.R
 import com.buranchikov.sevenwindsstudiotest.data_classes.Order
@@ -41,7 +42,8 @@ class ProductFragment : Fragment() {
 
         binding.btnGotoPay.setOnClickListener {
             getListOrder()
-            APP_ACTIVITY.viewModel.listOrder.value = listOrder
+
+            APP_ACTIVITY.viewModel.listOrder.postValue(listOrder)
             APP_ACTIVITY.navController.navigate(R.id.action_menuFragment_to_orderListFragment)
 
         }
@@ -58,7 +60,10 @@ class ProductFragment : Fragment() {
                 binding.rvMenu.findViewHolderForAdapterPosition(i) as? ProductListAdapter.Holder
             val countText = holder?.binding?.tvCountMenuItem?.text.toString()
             val count = countText.toInt()
-            if (count > 0) listOrder.add(Order(i, listProducts[i], count))
+            if (count > 0) {
+                listOrder.add(Order(i, listProducts[i], count))
+            }
+
         }
 
     }

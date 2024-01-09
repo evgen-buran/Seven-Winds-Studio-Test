@@ -1,15 +1,18 @@
 package com.buranchikov.sevenwindsstudiotest
 
+import API_KEY
 import APP_ACTIVITY
 import APP_API
 import BASE_URL
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.buranchikov.sevenwindsstudiotest.api.AppAPI
 import com.buranchikov.sevenwindsstudiotest.databinding.ActivityMainBinding
+import com.yandex.mapkit.MapKitFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -22,6 +25,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         APP_ACTIVITY = this
+        MapKitFactory.setApiKey(API_KEY)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView (binding.root)
 
@@ -30,8 +35,10 @@ class MainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(APP_ACTIVITY).get(MainViewModel::class.java)
 
-        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar()?.setDisplayShowHomeEnabled(true);
+
+        setSupportActionBar(binding.materialToolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true);
+//        supportActionBar?.setDisplayShowHomeEnabled(true);
         binding.materialToolbar.setNavigationOnClickListener { _ -> onBackPressed() };
     }
 

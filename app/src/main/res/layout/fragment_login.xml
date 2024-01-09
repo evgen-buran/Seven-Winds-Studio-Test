@@ -7,16 +7,6 @@
     android:background="@color/white"
     tools:context=".fragments.RegisterFragment">
 
-    <TextView
-        android:id="@+id/token"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="token"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
@@ -48,7 +38,7 @@
                 style="@style/register_login_editText"
                 android:hint="@string/email_hint"
                 android:inputType="text|textEmailAddress"
-                android:text="pop" />
+                android:text="pp@pp.com" />
         </LinearLayout>
 
         <LinearLayout
@@ -71,7 +61,7 @@
                 style="@style/register_login_editText"
 
                 android:inputType="text|textPassword"
-                android:text="pop" />
+                android:text="pp" />
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton

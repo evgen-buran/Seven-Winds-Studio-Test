@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.list_locations.LocationListFragment">
 
-    <Button
-        android:id="@+id/btnX"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvListCoffee"
         android:layout_width="match_parent"
@@ -27,7 +17,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnOnMap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnX"
+        app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/list_item" />
 
 

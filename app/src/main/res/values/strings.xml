@@ -20,4 +20,7 @@
     <string name="menu">Меню</string>
     <string name="total_price">ИТОГО:</string>
     <string name="youre_order">Ваш заказ</string>
+    <string name="difference_passwords">Неодинаковые пароли!</string>
+    <string name="register_error">Ошибка регистрации</string>
+    <string name="empty_list_order">Вы ничего не заказали.\nНажмите кнопку \"Назад\" для просмотра меню.</string>
 </resources>

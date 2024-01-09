@@ -1,5 +1,6 @@
 package com.buranchikov.sevenwindsstudiotest.fragments.list_locations
 
+import TAG
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.buranchikov.sevenwindsstudiotest.R
 import com.buranchikov.sevenwindsstudiotest.data_classes.Location
 import com.buranchikov.sevenwindsstudiotest.databinding.ListItemBinding
-import TAG
 
 class LocationListAdapter : ListAdapter<Location, LocationListAdapter.Holder>(Comparator()) {
 

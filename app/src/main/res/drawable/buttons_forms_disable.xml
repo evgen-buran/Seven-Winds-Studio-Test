@@ -1,0 +1,9 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <corners android:radius="32dp" />
+            <solid android:color="@color/btn_color_disable" />
+        </shape>
+    </item>
+</selector>
